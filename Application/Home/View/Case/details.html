@@ -1,0 +1,321 @@
+<extend name="Index/index" />
+<block name="nav">
+  <nav class="nav">
+    <div class="main-nav clearfix" skinobjectzone="menu_471">
+      <ul class="sf-menu">
+        <li ><a class="first-level" href="<{:U('Index/index')}>" target=""><strong>首页</strong></a><i></i></li>
+        <li  ><a class="first-level" href="<{:U('About/index')}>" target=""><strong>关于我们</strong></a><i></i>
+          <ul class="">
+            
+            <li class=""><a class="" href="<{:U('About/index')}>" target=""><strong>公司简介</strong></a></li>
+            
+            <li class=""><a class="" href="<{:U('About/wenhua')}>" target=""><strong>企业文化</strong></a></li>
+            
+            <li class=""><a class="" href="<{:U('About/fazhan')}>" target=""><strong>发展历程</strong></a></li>
+            
+          </ul>
+        </li><li ><a class="first-level" href="<{:U('Service/index')}>" target=""><strong>服务项目</strong></a><i></i>
+          <ul class="">
+            
+            <li class=""><a class="" href="<{:U('Service/index')}>" target=""><strong>服务范围</strong></a></li>
+            
+            <li class=""><a class="" href="<{:U('Service/youshi')}>" target=""><strong>服务优势</strong></a></li>
+            
+            <li class=""><a class="" href="<{:U('Service/liucheng')}>" target=""><strong>服务流程</strong></a></li>
+            
+          </ul>
+        </li><li class="current"><a class="first-level" href="<{:U('Case/index')}>" target=""><strong>案例欣赏</strong></a><i></i>
+          <ul class="">
+            
+            <li class=""><a class="" href="<{:U('Case/shangye')}>" target=""><strong>商业空间</strong></a></li>
+            
+            <li class=""><a class="" href="<{:U('Case/yule')}>" target=""><strong>娱乐空间</strong></a></li>
+            
+            <li class=""><a class="" href="<{:U('Case/jiudian')}>" target=""><strong>酒店会所</strong></a></li>
+            
+            <li class=""><a class="" href="<{:U('Case/zhuzhai')}>" target=""><strong>住宅空间</strong></a></li>
+            
+          </ul>
+        </li><li ><a class="first-level" href="<{:U('Team/index')}>" target=""><strong>专家团队</strong></a><i></i>
+          <ul class="">
+            
+          </ul>
+        </li><li ><a class="first-level" href="<{:U('New/index')}>" target=""><strong>新闻资讯</strong></a><i></i>
+          <ul class="">
+            
+            <li class=""><a class="" href="<{:U('New/gongsi')}>" target=""><strong>公司新闻</strong></a></li>
+            
+            <li class=""><a class="" href="<{:U('New/hangye')}>" target=""><strong>行业动态</strong></a></li>
+            
+            <li class=""><a class="" href="<{:U('New/wenti')}>" target=""><strong>常见问题</strong></a></li>
+            
+          </ul>
+        </li><li ><a class="first-level" href="<{:U('Job/index')}>" target=""><strong>人力资源</strong></a><i></i>
+          <ul class="">
+            
+            <li class=""><a class="" href="<{:U('Job/index')}>" target=""><strong>人才战略</strong></a></li>
+            
+            <li class=""><a class="" href="<{:U('Job/pin')}>" target=""><strong>人才招聘</strong></a></li>
+            
+          </ul>
+        </li><li ><a class="first-level" href="<{:U('Contact/index')}>" target=""><strong>联系我们</strong></a><i></i>
+          <ul class="">
+            
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</block>
+<block name="main">
+    <script type="text/javascript">
+    $(document).ready(function(){
+     $(".touch-toggle a").click(function(event){
+
+      var className = $(this).attr("data-drawer");
+      if( $("."+className).css('display') == 'none' ){      
+
+       $("."+className).slideDown().siblings(".drawer-section").slideUp();
+
+      }else{
+
+       $(".drawer-section").slideUp(); 
+
+      }
+
+      event.stopPropagation();
+
+     });
+
+     
+
+     /*$(document).click(function(){
+
+      $(".drawer-section").slideUp();     
+
+     })*/
+
+     
+
+     $('.touch-menu a').click(function(){     
+
+      if( $(this).next().is('ul') ){
+
+       if( $(this).next('ul').css('display') == 'none' ){
+
+        $(this).next('ul').slideDown();
+
+        $(this).find('i').attr("class","touch-arrow-up");     
+
+       }else{
+
+        $(this).next('ul').slideUp();
+
+        $(this).next('ul').find('ul').slideUp();
+
+        $(this).find('i').attr("class","touch-arrow-down");
+
+       }   
+
+      }
+
+     });
+
+    });
+
+</script></div>
+  <!-- E touch-top --></div>
+
+    <div id="a1portalSkin_headerAreaA" class="header"><!-- Start_Module_121054 --><a name="32476" id="32476"></a>
+      <div class="module-default">
+        <div class="module-inner">
+          <div id="a1portalSkin_ctr121054121054_mainArea" class="module-content"><!-- Start_Module_121054 --><!-- S slideshow -->
+            <div class="slideshow slideshow-min carousel clearfix" style="height:500px; overflow:hidden;">
+              <div id="carousel-121054">
+                <div class="carousel-item">
+                  <div class="carousel-img"><a href="javascript:;" target=""><img src="__PUBLIC__/style/images/case.jpg" height="500" alt="" /></a></div>
+                </div>
+              </div>
+              <div class="carousel-btn carousel-btn-fixed" id="carousel-page-121054"></div>
+            </div>
+            <script type="text/javascript">
+
+ $(window).bind("load resize",function(){
+
+  $("#carousel-121054").carouFredSel({
+
+   width       : '100%',
+
+   items  : { visible : 1 },
+
+   auto     : { pauseOnHover: true, timeoutDuration:5000 },
+
+   swipe     : { onTouch:true, onMouse:true },
+
+   pagination  : "#carousel-page-121054",
+
+   scroll   : { fx : "crossfade" }
+
+  }); 
+
+ });
+
+</script><!-- E slideshow --><!-- End_Module_121054 --></div>
+        </div>
+      </div>
+    </div>
+    <!-- ==================== E Header ==================== --><!-- ==================== S main ==================== -->
+    <section class="main">
+      <div class="page-width clearfix"><!-- S content -->
+        <section class="content float-right"><!-- S page-title -->
+          <?php if($arr['type_id'] == 1){ ?>
+          <section class="page-title page-title-inner clearfix"><!-- S breadcrumbs -->
+            <div class="breadcrumbs float-right" skinobjectzone="HtmlBreadCrumb_2643"><span>当前位置：</span><a href="<{:U('Index/index')}>">主页</a> > <a href="<{:U('Case/index')}>">案例欣赏</a> > <a href="<{:U('Case/shangye')}>">商业空间</a> >
+            </div>
+            <!-- E breadcrumbs --><!-- S page-name -->
+            <div class="page-name float-left">
+              <h2>商业空间</h2>
+            </div>
+            <!-- E page-name -->
+          </section>
+          <?php }elseif($arr['type_id'] == 2){ ?>
+          <section class="page-title page-title-inner clearfix"><!-- S breadcrumbs -->
+            <div class="breadcrumbs float-right" skinobjectzone="HtmlBreadCrumb_2643"><span>当前位置：</span><a href="<{:U('Index/index')}>">主页</a> > <a href="<{:U('Case/index')}>">案例欣赏</a> > <a href="<{:U('Case/yule')}>">娱乐空间</a> >
+            </div>
+            <!-- E breadcrumbs --><!-- S page-name -->
+            <div class="page-name float-left">
+              <h2>娱乐空间</h2>
+            </div>
+            <!-- E page-name -->
+          </section>
+          <?php }elseif($arr['type_id'] == 3){ ?>
+          <section class="page-title page-title-inner clearfix"><!-- S breadcrumbs -->
+            <div class="breadcrumbs float-right" skinobjectzone="HtmlBreadCrumb_2643"><span>当前位置：</span><a href="<{:U('Index/index')}>">主页</a> > <a href="<{:U('Case/index')}>">案例欣赏</a> > <a href="<{:U('Case/jiudian')}>">酒店会所</a> >
+            </div>
+            <!-- E breadcrumbs --><!-- S page-name -->
+            <div class="page-name float-left">
+              <h2>酒店会所</h2>
+            </div>
+            <!-- E page-name -->
+          </section>
+          <?php }elseif($arr['type_id'] == 4){ ?>
+          <section class="page-title page-title-inner clearfix"><!-- S breadcrumbs -->
+            <div class="breadcrumbs float-right" skinobjectzone="HtmlBreadCrumb_2643"><span>当前位置：</span><a href="<{:U('Index/index')}>">主页</a> > <a href="<{:U('Case/index')}>">案例欣赏</a> > <a href="<{:U('Case/zhuzhai')}>">住宅空间</a> >
+            </div>
+            <!-- E breadcrumbs --><!-- S page-name -->
+            <div class="page-name float-left">
+              <h2>住宅空间</h2>
+            </div>
+            <!-- E page-name -->
+          </section>
+          <?php } ?>
+          <!-- E page-title -->
+          <div id="a1portalSkin_mainArea" class="content-wrapper"><!-- Start_Module_121053 --><a name="32444" id="32444"></a>
+            <div class="module-default">
+              <div class="module-inner">
+                <div id="a1portalSkin_ctr121053121053_mainArea" class="module-content"><!-- Start_Module_121053 --><!-- S article-detail -->
+                  <div class="article-detail">
+                    <div class="article-title">
+                      <h1><{$arr.title}></h1>
+                    </div>
+                    <div class="entry-meta">
+                    
+                      <?php if($arr['type_id'] == 1){ ?>
+                      <span><strong>所属分类：</strong><a href="<{:U('Case/shangye')}>">商业空间</a></span>
+                      <?php }elseif($arr['type_id'] == 2){ ?>
+                      <span><strong>所属分类：</strong><a href="<{:U('Case/yule')}>">娱乐空间</a></span>
+                      <?php }elseif($arr['type_id'] == 3){ ?>
+                      <span><strong>所属分类：</strong><a href="<{:U('Case/jiudian')}>">酒店会所</a></span>
+                      <?php }elseif($arr['type_id'] == 4){ ?>
+                      <span><strong>所属分类：</strong><a href="<{:U('Case/zhuzhai')}>">住宅空间</a></span>
+                      <?php } ?>
+
+                      <span><strong>发布时间：</strong><strong><{$arr.created_time|date="Y-m-d H:i",###}></strong></span>
+                      <div class="share-toolbar clearfix">
+                        <div class="bdsharebuttonbox"><span>分享到：</span><a title="分享到QQ空间" href="#" class="bds_qzone" data-cmd="qzone"></a><a title="分享到新浪微博" href="#" class="bds_tsina" data-cmd="tsina"></a><a title="分享到腾讯微博" href="#" class="bds_tqq" data-cmd="tqq"></a><a title="分享到微信" href="#" class="bds_weixin" data-cmd="weixin"></a><a href="#" class="bds_more" data-cmd="more"></a></div>
+                        <script>
+                          window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                        </script>
+                        </div>
+                    </div>
+
+                    <div class="article-content-wrapper">
+                      <div class="article-content">
+                        <div class="qhd-content">
+                          <div>项目地址：<{$arr.address}></div>
+                          <div>&nbsp;</div>
+                          <div>项目面积：<{$arr.area}></div>
+                          <div>&nbsp;</div>
+                          <div>设计理念：<{$arr.content}><br />&nbsp;</div>
+                          <div style="text-align: center;">
+                          <img alt="" src="__PUBLIC__/<{$arr.img}>" style="width: 800px; height: 600px;" />
+                          </div>
+                        </div>             
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- article-detail --><!-- End_Module_121053 --></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- S content --><!-- S sidebar -->
+        <section class="sidebar float-left">
+          <div id="a1portalSkin_sidebarAreaA" class="sidebar-content"><!-- Start_Module_121052 --><a name="32443" id="32443"></a>
+            <div class="module module-hlbg">
+              <div class="module-inner">
+                <div class="module-hlbg-title clearfix">
+                  <h3 class="" style="">案例欣赏</h3>
+                </div>
+                <div id="a1portalSkin_ctr121052121052_mainArea" class="module-hlbg-content"><!-- Start_Module_121052 --><!-- S article-category -->
+                  <div class="category category-121052 article-category">
+                    <ul>
+                    <?php if($arr['type_id'] == 1){ ?>
+                    <li  class="current"><a href="<{:U('Case/shangye')}>" target="">商业空间</a></li><li ><a href="<{:U('Case/yule')}>" target="">娱乐空间</a></li><li ><a href="<{:U('Case/jiudian')}>" target="">酒店会所</a></li><li ><a href="<{:U('Case/zhuzhai')}>" target="">住宅空间</a></li>
+                    
+                    <?php }elseif($arr['type_id'] == 2){ ?>
+                    <li><a href="<{:U('Case/shangye')}>" target="">商业空间</a></li><li class="current"><a href="<{:U('Case/yule')}>" target="">娱乐空间</a></li><li ><a href="<{:U('Case/jiudian')}>" target="">酒店会所</a></li><li ><a href="<{:U('Case/zhuzhai')}>" target="">住宅空间</a></li>
+                    
+                    <?php }elseif($arr['type_id'] == 3){ ?>
+                    <li><a href="<{:U('Case/shangye')}>" target="">商业空间</a></li><li ><a href="<{:U('Case/yule')}>" target="">娱乐空间</a></li><li class="current"><a href="<{:U('Case/jiudian')}>" target="">酒店会所</a></li><li ><a href="<{:U('Case/zhuzhai')}>" target="">住宅空间</a></li>
+                    
+                    <?php }elseif($arr['type_id'] == 4){ ?>
+                    <li><a href="<{:U('Case/shangye')}>" target="">商业空间</a></li><li ><a href="<{:U('Case/yule')}>" target="">娱乐空间</a></li><li ><a href="<{:U('Case/jiudian')}>" target="">酒店会所</a></li><li class="current"><a href="<{:U('Case/zhuzhai')}>" target="">住宅空间</a></li>
+                    
+                    <?php } ?>
+                    </ul>
+                  </div>
+                  <script type="text/javascript">
+
+ $(document).ready(function(){
+
+  $('.category-121052 ul').find('li:last').addClass('last');
+
+  
+
+  $('.category-121052 > ul > li > a, .category-121052 > ul > li > i').click(function(){
+
+   if( $(this).parent('li').find('ul') ){
+
+    $(this).parent('li').find('ul').slideDown('fast');
+
+    $(this).parent('li').siblings('li').find('ul').slideUp('fast');
+
+    $(this).parent('li').addClass('current').siblings('li').removeClass('current');
+
+   }
+
+  });   
+
+ });
+
+</script><!-- E article-category --><!-- End_Module_121052 --></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- E sidebar --></div>
+    </section>
+
+</block>

@@ -1,0 +1,225 @@
+<extend name="Index/index" />
+
+<block name="keyword">
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+</block>
+
+<block name="nav">
+        <nav class="nav">
+          <div class="main-nav clearfix" skinobjectzone="menu_471">
+            <ul class="sf-menu">
+              <li ><a class="first-level" href="<{:U('Index/index')}>" target=""><strong>首页</strong></a><i></i></li>
+              <li><a class="first-level" href="<{:U('About/index')}>" target=""><strong>关于我们</strong></a><i></i>
+                <ul class="">
+                  
+                  <li class=""><a class="" href="<{:U('About/index')}>" target=""><strong>公司简介</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('About/wenhua')}>" target=""><strong>企业文化</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('About/fazhan')}>" target=""><strong>发展历程</strong></a></li>
+                  
+                </ul>
+              </li><li ><a class="first-level" href="<{:U('Service/index')}>" target=""><strong>服务项目</strong></a><i></i>
+                <ul class="">
+                  
+                  <li class=""><a class="" href="<{:U('Service/index')}>" target=""><strong>服务范围</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('Service/youshi')}>" target=""><strong>服务优势</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('Service/liucheng')}>" target=""><strong>服务流程</strong></a></li>
+                  
+                </ul>
+              </li><li ><a class="first-level" href="<{:U('Case/index')}>" target=""><strong>案例欣赏</strong></a><i></i>
+                <ul class="">
+                  
+                  <li class=""><a class="" href="<{:U('Case/shangye')}>" target=""><strong>商业空间</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('Case/yule')}>" target=""><strong>娱乐空间</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('Case/jiudian')}>" target=""><strong>酒店会所</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('Case/zhuzhai')}>" target=""><strong>住宅空间</strong></a></li>
+                  
+                </ul>
+              </li><li class="current"><a class="first-level" href="<{:U('Team/index')}>" target=""><strong>专家团队</strong></a><i></i>
+                <ul class="">
+                  
+                </ul>
+              </li><li ><a class="first-level" href="<{:U('New/index')}>" target=""><strong>新闻资讯</strong></a><i></i>
+                <ul class="">
+                  
+                  <li class=""><a class="" href="<{:U('New/gongsi')}>" target=""><strong>公司新闻</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('New/hangye')}>" target=""><strong>行业动态</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('New/wenti')}>" target=""><strong>常见问题</strong></a></li>
+                  
+                </ul>
+              </li><li ><a class="first-level" href="<{:U('Job/index')}>" target=""><strong>人力资源</strong></a><i></i>
+                <ul class="">
+                  
+                  <li class=""><a class="" href="<{:U('Job/index')}>" target=""><strong>人才战略</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('Job/pin')}>" target=""><strong>人才招聘</strong></a></li>
+                  
+                </ul>
+              </li><li ><a class="first-level" href="<{:U('Contact/index')}>" target=""><strong>联系我们</strong></a><i></i>
+                <ul class="">
+                  
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+</block>
+
+<block name="main">
+
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+
+     
+
+     $(".touch-toggle a").click(function(event){
+
+      var className = $(this).attr("data-drawer");
+
+      
+
+      if( $("."+className).css('display') == 'none' ){      
+
+       $("."+className).slideDown().siblings(".drawer-section").slideUp();
+
+      }else{
+
+       $(".drawer-section").slideUp(); 
+
+      }
+
+      event.stopPropagation();
+
+     });
+
+     
+
+     /*$(document).click(function(){
+
+      $(".drawer-section").slideUp();     
+
+     })*/
+
+     
+
+     $('.touch-menu a').click(function(){     
+
+      if( $(this).next().is('ul') ){
+
+       if( $(this).next('ul').css('display') == 'none' ){
+
+        $(this).next('ul').slideDown();
+
+        $(this).find('i').attr("class","touch-arrow-up");     
+
+       }else{
+
+        $(this).next('ul').slideUp();
+
+        $(this).next('ul').find('ul').slideUp();
+
+        $(this).find('i').attr("class","touch-arrow-down");
+
+       }   
+
+      }
+
+     });
+
+    });
+
+</script></div>
+  <!-- E touch-top --></div>
+
+    <div id="a1portalSkin_headerAreaA" class="header"><!-- Start_Module_121057 --><a name="32477" id="32477"></a>
+      <div class="module-default">
+        <div class="module-inner">
+          <div id="a1portalSkin_ctr121057121057_mainArea" class="module-content"><!-- Start_Module_121057 --><!-- S slideshow -->
+            <div class="slideshow slideshow-min carousel clearfix" style="height:500px; overflow:hidden;">
+              <div id="carousel-121057">
+                <div class="carousel-item">
+                  <div class="carousel-img"><a href="javascript:;" target=""><img src="__PUBLIC__/style/images/team.jpg" height="500" alt="" /></a></div>
+                </div>
+              </div>
+              <div class="carousel-btn carousel-btn-fixed" id="carousel-page-121057"></div>
+            </div>
+            <script type="text/javascript">
+
+ $(window).bind("load resize",function(){
+
+  $("#carousel-121057").carouFredSel({
+
+   width       : '100%',
+
+   items  : { visible : 1 },
+
+   auto     : { pauseOnHover: true, timeoutDuration:5000 },
+
+   swipe     : { onTouch:true, onMouse:true },
+
+   pagination  : "#carousel-page-121057",
+
+   scroll   : { fx : "crossfade" }
+
+  }); 
+
+ });
+
+</script><!-- E slideshow --><!-- End_Module_121057 --></div>
+        </div>
+      </div>
+    </div>
+    <!-- ==================== E Header ==================== --><!-- ==================== S main ==================== -->
+    <section class="main">
+      <div class="page-width clearfix"><!-- S full-page-content -->
+        <div class="full-page-content">
+          <div id="a1portalSkin_mainArea" class="full-page-content-wrapper"><!-- Start_Module_121056 --><a name="32442" id="32442"></a>
+            <div class="module-default">
+              <div class="module-inner">
+                <div id="a1portalSkin_ctr121056121056_mainArea" class="module-content"><!-- Start_Module_121056 --><!-- S team-detail -->
+                  <div class="team-detail">
+                    <div class="team-introduction">
+                      <div class="typo">
+
+                        <div class="typo-img">
+                          <p class="team-img"><img src="__PUBLIC__<{$team.img}>" alt="<{$team.name}>" width="400" /></p>
+                        </div>
+                        <div class="typo-text">
+                          <h3 class="team-name"><{$team.name}></h3>
+                          <div class="team-info">
+                            <div class="qhd-content">
+                              <p>职称：<{$team.zhicheng}></p>
+                              <div>年限：<{$team.work_time}></div>
+                              <div>&nbsp;</div>
+                              <div>简介：<{$team.jianjie}></div>
+                              <div>&nbsp;</div>
+                              <div>风格：<{$team.fenge}></div>
+                              <div>&nbsp;</div>
+                              <div>经验：<{$team.exper}></div>
+
+                            </div>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- E full-page-content --></div>
+    </section>
+
+</block>

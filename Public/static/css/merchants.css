@@ -1,0 +1,64 @@
+.con{width: 1200px;margin: 0 auto;}
+.main{width: 100%;}
+.title{width: 100%;height: 180px;padding: 60px 0;text-align: center;}
+.title h3{font-size: 34px;font-weight: 600;line-height: 70px;color: #333;}
+.title span{font-size: 20px;line-height: 50px;color: #666;font-weight: 600;}
+
+
+/*part1*/
+.main .part1{width: 100%;height: 950px;background: #FDFDFD;}
+.main .content{width: 1200px;margin:0 auto;height: 250px;font-size: 31px;line-height: 50px;margin-top: 50px;}
+.main .content p{text-indent: 2em;color: #666;font-weight: 600;}
+.main .content p span{color: #000;}
+.main .part1_box{width: 100%;height: 150px;padding: 0 145px;box-sizing: border-box;font-weight: 600;}
+.main .part1_box li{float: left;margin: 0 17px;}
+.main .part1_box li img{width: 122px;height: 148px;}
+.main .part1_box li p{height: 50px;line-height: 50px;font-size: 20px;}
+.main .part1_box li p span{font-size: 24px;}
+
+/*part2*/
+.main .part2{width: 100%;height: 292px;}
+.main .part2 img{width: 100%;height: 100%;}
+
+/*part3*/
+.main .part3{width: 100%;height: ;background: #fefdfd;}
+.main .part3_box>div{width: 440px;height: 800px;float: left;margin: 0 80px;}
+.main .part3_box .box_title{width: 100%;text-align: center;margin-bottom: 60px;}
+.main .part3_box .box_title h5{font-size: 24px;line-height: 70px;color: #333;font-weight: 600;}
+.main .part3_box .box_title span{font-size: 14px;font-weight: 600;}
+.main .part3_box_1 ul{width: 100%;}
+.main .part3_box_1 ul li{width: 50%;float: left;text-align: center;margin-bottom: 40px;}
+.main .part3_box_1 ul img{margin: 0 auto;display: block;}
+.main .part3_box_1 ul h5{line-height: 70px;font-size: 24px;}
+.main .part3_box_2 ul{width: 100%;height: 300px;}
+.main .part3_box_2 ul li{width: 100px;height: 100px;float: left;text-align: center;margin: 15px 23px;border-radius: 50px;box-shadow: 0 0 10px #ededed;}
+.main .part3_box_2 ul img{width: 35px;height: 35px;margin: 0 auto;display: block;margin-top: 20px;}
+.main .part3_box_2 ul h5{line-height: 26px;font-size: 14px;}
+.main .part3_box_2 .lable{width: 60px;line-height: 20px;height: 60px;font-size: 14px;margin: 50px auto;text-align: center;font-weight: 600;}
+.main .part3_box_2 a{width: 120px;height: 40px;line-height: 40px;text-align: center;border: #000 solid 1px;display: block;margin: 0 auto;font-size: 16px;font-weight: 600;}
+
+
+/*part4*/
+.main .part4{width: 100%;height: 810px;background: #fefdfd;}
+.main .part4_box{padding: 0 60px;}
+.main .part4_box li{width: 210px;height: 320px;float: left;margin:0 75px 10px 75px;box-shadow: 0 0 10px #ededed;position: relative;}
+.main .part4_box li:hover{transition: all 0.5s;transform: translateY(-15px);}
+.main .part4_box img{width: 93px;height: 93px;position: absolute;left: 0;right: 0;margin: 30px auto;}
+.main .part4_box h4{width: 100%;text-align: center;font-size: 24px;color: #373737;font-weight: 600;margin-top: 160px;}
+.main .part4_box span{width: 180px;margin-top:30px ;display: block;margin-left: 15px;font-size: 15px;font-weight: 600;line-height: 24px;}
+
+/*模态框*/
+.modalBox{width: 100%;height: 100%;background: rgba(0,0,0,0.8);position: fixed;left: 0;top: 0;display: none;z-index: 99;}
+.modalBox .modalBox_con{width: 500px;height: 430px;background: #fefdfd;position: fixed;left: 0;right: 0;top: 0;bottom: 0;margin: auto;}
+.modalBox .modalBox_con h3{width: 100%;line-height: 70px;font-size: 30px;text-align: center;}
+.modalBox .modalBox_con .form_item{width: 70%;margin: 10px auto;height: 70px;position: relative;}
+.modalBox .form_item label{width: 100%;font-size: 16px;display: block;height: 30px;line-height: 30px;}
+.modalBox .form_item input{width: 90%;height: 38px;line-height: 38px;border: #ccc solid 1px;padding-left: 5%;font-size: 14px;}
+.modalBox .form_item .yzm{width: 40%;float: left;}
+.modalBox .form_item span{width: 40%;height: 40px;background: #ccc;display: block;float: left;margin-left: 10%;}
+#index_submit{width: 70%;height: 40px;line-height: 40px;background: #339a44;font-size: 16px;color: white;border-radius: 5px;margin-top: 15px;margin-left: 15%;}
+.form_item img{position: absolute;width: 30px;height: 30px;right: -22px;top: 35px;}
+.form_item .true{display: none;}
+.form_item .false{display: none;width: 36px;height: 30px;right: -25px;}
+.modalBox .form_item .lable{color: red;width: 60%;text-align: right;position: absolute;font-size: 12px;height: 20px;line-height: 20px;position: absolute;right: 16px;background: none;}
+.modalBox .form_item:nth-child(3) .lable{top: 70px;}

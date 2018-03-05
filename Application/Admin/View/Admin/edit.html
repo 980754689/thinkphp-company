@@ -1,0 +1,60 @@
+<extend name="Layout/index" />
+<block name="breadcrumb-01">
+	<li class="active">管理员管理</li>
+</block>
+
+<block name="breadcrumb-02">
+	<h1>
+		管理员管理
+		<small>
+			<i class="icon-double-angle-right"></i>
+			管理员修改
+		</small>
+	</h1>
+</block>
+<block name="main">
+	<div class="row">
+		<div class="col-md-12">
+		<form action="<{:U('Admin/save')}>" class="form-horizontal" enctype="multipart/form-data" method="post">
+
+			<div class="form-group" style="">
+				<label for="" class="col-sm-2 control-label">用户名：</label>
+				<div class="col-sm-4">
+					<input type="text" name="username" class="form-control" value="<{$vo.username}>">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">密码：</label>
+				<div class="col-sm-4">
+					<input  type="password" name="password_hash" class="form-control" value="<{$vo.password_hash}>">
+				</div>
+			</div>
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">邮箱：</label>
+				<div class="col-sm-4">
+					<input  type="text" name="email" class="form-control" value="<{$vo.email}>">
+				</div>
+			</div>			
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">状态：</label>
+				<div class="col-sm-4">
+					<input type="radio" name="status" value="10" <if condition="$vo.status eq 10">checked</if>>启用
+					<input type="radio" name="status" value="0" <if condition="$vo.status eq 0">checked</if>>禁用
+				</div>
+			</div>
+			<!-- <div class="form-group">
+				<label for="" class="col-sm-2 control-label">图像：</label>
+				<div class="col-sm-4">
+					<input  type="file" name="avatar" value="<{$vo.avatar}>">
+				</div>
+			</div>-->			
+			<div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-4">
+			      <input type="hidden" name="id" value="<{$vo.id}>">
+			      <button type="submit" class="btn btn-default">修 改</button>
+			    </div>
+			</div>
+		</form>
+		</div>
+	</div>
+</block>

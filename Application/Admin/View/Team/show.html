@@ -1,0 +1,152 @@
+<extend name="Layout/index" />
+<block name="breadcrumb-01">
+    <li class="active">专家团队</li>
+</block>
+
+<block name="breadcrumb-02">
+    <h1>
+        团队管理
+        <small>
+            <i class="icon-double-angle-right"></i>
+            查看成员信息
+        </small>
+    </h1>
+</block>
+<block name="main">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="" class="form-horizontal" enctype="multipart/form-data" method="post">
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">姓名：</label>
+                    <div class="col-sm-4">
+                        <!-- <input type="text" name="title" class="form-control" placeholder="" value="<{$vo.title}>"> -->
+                        <P style="margin:5px 3px 10px"><{$vo.name}></P>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">职称 ：</label>
+                    <div class="col-sm-4">
+                        <!-- <textarea style="width:450px;height:100px;" name="content_1"><{$vo.content_1}></textarea> -->
+                        <P style="margin:5px 3px 10px"><{$vo.zhicheng}></P>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">工作年限 ：</label>
+                    <div class="col-sm-4">
+                        <!-- <textarea style="width:450px;height:100px;" name="content_1"><{$vo.content_1}></textarea> -->
+                        <P style="margin:5px 3px 10px"><{$vo.work_time}></P>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">分格 ：</label>
+                    <div class="col-sm-4">
+                        <!-- <textarea style="width:450px;height:100px;" name="content_1"><{$vo.content_1}></textarea> -->
+                        <P style="margin:5px 3px 10px"><{$vo.fenge}></P>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">简介 ：</label>
+                    <div class="col-sm-4">
+                        <!-- <textarea style="width:450px;height:100px;" name="content_1"><{$vo.content_1}></textarea> -->
+                        <P style="margin:5px 3px 10px"><{$vo.jianjie}></P>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">经验 ：</label>
+                    <div class="col-sm-4">
+                        <!-- <textarea style="width:450px;height:100px;" name="content_1"><{$vo.content_1}></textarea> -->
+                        <P style="margin:5px 3px 10px"><{$vo.exper}></P>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">展示状态：</label>
+                    <div class="col-sm-4">
+
+                        <?php if($vo['is_valid'] == 1){ ?>
+                            <P style="margin:5px 3px 10px">启用</P>
+                        <?php }else{ ?>
+                            <P style="margin:5px 3px 10px">禁用</P>
+                        <?php }?>
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">创建时间：</label>
+                    <div class="col-sm-4">
+                        <p style="margin:5px 3px 10px"><{$vo.created_time|date="Y-m-d",###}></p>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">修改时间：</label>
+                    <div class="col-sm-4">
+                        <p style="margin:5px 3px 10px"><{$vo.updated_time|date="Y-m-d",###}></p>
+                    </div>
+                </div>
+
+                <div class="form-group" style="">
+                    <label for="" class="col-sm-2 control-label">照片：</label>
+                    <div class="col-sm-4">
+                        <p style="margin:4px 3px 10px"><img src="__PUBLIC__<{$vo.img}>"  style="width:220px;height:295px;"/></p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        //下面用于多图片上传预览功能
+        function setImagePreviews(avalue) {
+            var docObj = document.getElementById("doc");
+            var dd = document.getElementById("dd");
+            dd.innerHTML = "";
+            var fileList = docObj.files;
+            for (var i = 0; i < fileList.length; i++) {
+                dd.innerHTML += "<div style='float:left' > <img id='img" + i + "'  /> </div>";
+                var imgObjPreview = document.getElementById("img"+i);
+                if (docObj.files && docObj.files[i]) {
+                    //火狐下，直接设img属性
+                    imgObjPreview.style.display = 'block';
+                    imgObjPreview.style.width = '220px';
+                    imgObjPreview.style.height = '295px';
+                    //imgObjPreview.src = docObj.files[0].getAsDataURL();
+                    //火狐7以上版本不能用上面的getAsDataURL()方式获取，需要一下方式
+                    imgObjPreview.src = window.URL.createObjectURL(docObj.files[i]);
+                }
+                else {
+                    //IE下，使用滤镜
+                    docObj.select();
+                    var imgSrc = document.selection.createRange().text;
+                    alert(imgSrc)
+                    var localImagId = document.getElementById("img" + i);
+                    //必须设置初始大小
+                    localImagId.style.width = "220px";
+                    localImagId.style.height = "295px";
+                    //图片异常的捕捉，防止用户修改后缀来伪造图片
+                    try {
+                        localImagId.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+                        localImagId.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = imgSrc;
+                    }
+                    catch (e) {
+                        alert("您上传的图片格式不正确，请重新选择!");
+                        return false;
+                    }
+                    imgObjPreview.style.display = 'none';
+                    document.selection.empty();
+                }
+            }
+            return true;
+        }
+    </script>
+
+
+</block>

@@ -1,0 +1,6 @@
+[ 2017-11-13T14:01:56+08:00 ] 116.226.213.44 /admin.php/home/index/index.html
+ERR: 模板不存在:./Application/Admin/View/Public/error-404.html
+
+[ 2017-11-13T14:02:05+08:00 ] 116.226.213.44 /admin.php/home/index/index.html
+ERR: 模板不存在:./Application/Admin/View/Public/error-404.html
+

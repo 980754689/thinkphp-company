@@ -1,0 +1,37 @@
+<extend name="Layout/index" />
+<block name="breadcrumb-01">
+	<li class="active">关于我们</li>
+</block>
+
+<block name="breadcrumb-02">
+	<h1>
+		关于我们
+		<small>
+			<i class="icon-double-angle-right"></i>
+			企业文化
+		</small>
+	</h1>
+</block>
+<block name="main">
+	<div class="row">
+		<div class="col-md-12">
+		<form action="<{:U('About/save_2')}>" class="form-horizontal" enctype="multipart/form-data" method="post">
+
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">企业文化：</label>
+				<div class="col-sm-4">
+					<textarea style="width:600px;height:200px;margin:10px 3px 10px" name="wenhua"><{$arr.wenhua}></textarea>
+				</div>
+			</div>
+				
+			<div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-4">
+					<input type="hidden" name="id" value="<{$arr.id}>">
+					<button type="submit" class="btn btn-default">提 交</button>
+			    </div>
+			</div>
+
+		</form>
+		</div>
+	</div>
+</block>

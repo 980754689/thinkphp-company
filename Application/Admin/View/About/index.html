@@ -1,0 +1,85 @@
+<extend name="Layout/index" />
+<block name="breadcrumb-01">
+	<li class="active">关于我们</li>
+</block>
+
+<block name="breadcrumb-02">
+	<h1>
+		关于我们
+		<small>
+			<i class="icon-double-angle-right"></i>
+			关于我们
+		</small>
+	</h1>
+</block>
+<block name="main">
+	<div class="row">
+		<div class="col-md-12">
+		<form action="<{:U('About/save')}>" class="form-horizontal" enctype="multipart/form-data" method="post">
+
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">公司名：</label>
+				<div class="col-sm-4">
+					<input  type="text" name="company" class="form-control" value="<{$vo.company}>">
+				</div>
+			</div>
+
+			<div class="form-group" style="">
+				<label for="" class="col-sm-2 control-label">电话：</label>
+				<div class="col-sm-4">
+					<input type="text" name="tel" class="form-control" value="<{$vo.tel}>">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">手机：</label>
+				<div class="col-sm-4">
+					<input  type="text" name="phone" class="form-control" value="<{$vo.phone}>">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">邮箱：</label>
+				<div class="col-sm-4">
+					<input  type="text" name="email" class="form-control" value="<{$vo.email}>">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">QQ：</label>
+				<div class="col-sm-4">
+					<input  type="text" name="qq" class="form-control" value="<{$vo.qq}>">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">微信：</label>
+				<div class="col-sm-4">
+					<input  type="text" name="wechat" class="form-control" value="<{$vo.wechat}>">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">工作时间：</label>
+				<div class="col-sm-4">
+					<input  type="text" name="work_time" class="form-control" value="<{$vo.work_time}>">
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label for="" class="col-sm-2 control-label">地址：</label>
+				<div class="col-sm-4">
+					<input  type="text" name="address" class="form-control" value="<{$vo.address}>">
+				</div>
+			</div>
+				
+			<div class="form-group">
+			    <div class="col-sm-offset-2 col-sm-4">
+					<input type="hidden" name="id" value="<{$vo.id}>">
+					<button type="submit" class="btn btn-default">提 交</button>
+			    </div>
+			</div>
+		</form>
+		</div>
+	</div>
+</block>

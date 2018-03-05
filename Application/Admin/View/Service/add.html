@@ -1,0 +1,52 @@
+<extend name="Layout/index" />
+<block name="breadcrumb-01">
+	<li class="active">服务管理</li>
+</block>
+
+<block name="breadcrumb-02">
+	<h1>
+		服务管理
+		<small>
+			<i class="icon-double-angle-right"></i>
+			添加服务
+		</small>
+	</h1>
+</block>
+<block name="main">
+
+	<div class="row">
+		<div class="col-md-12">
+			<form action="<{:U('Service/doadd')}>" method='post' class="form-horizontal" enctype="multipart/form-data">
+
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">服务名称 ：</label>
+					<div class="col-sm-4">
+						<input type="text" name="title" class="form-control" placeholder="">
+					</div>
+				</div>
+
+				<div class="form-group" style="">
+					<label for="" class="col-sm-2 control-label">服务图片：</label>
+					<div class="col-sm-4">
+						<input type="file" name="img" class="" placeholder="">
+						<p>(建议使用273*160，否则图片变形)</p>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">展示状态：</label>
+					<div class="col-sm-4">
+						<input type="radio" name="is_valid" value="1" checked>启用
+						<input type="radio" name="is_valid" value="0" >禁用
+					</div>
+				</div>			
+
+				<div class="form-group">
+				    <div class="col-sm-offset-2 col-sm-4">
+				      <button type="submit" style="width: 100px;border-radius: 10px" class="btn btn-default">添 加</button>
+				    </div>
+				</div>
+			</form>
+		</div>
+	</div>
+</block>

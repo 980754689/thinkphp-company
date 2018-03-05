@@ -1,0 +1,253 @@
+<extend name="Index/index" />
+
+<block name="keyword">
+<meta name="description" content="<{$key.description}>" />
+<meta name="keywords" content="<{$key.keywords}>" />
+</block>
+
+<block name="nav">
+        <nav class="nav">
+          <div class="main-nav clearfix" skinobjectzone="menu_471">
+            <ul class="sf-menu">
+              <li ><a class="first-level" href="<{:U('Index/index')}>" target=""><strong>首页</strong></a><i></i></li>
+              <li><a class="first-level" href="<{:U('About/index')}>" target=""><strong>关于我们</strong></a><i></i>
+                <ul class="">
+                  
+                  <li class=""><a class="" href="<{:U('About/index')}>" target=""><strong>公司简介</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('About/wenhua')}>" target=""><strong>企业文化</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('About/fazhan')}>" target=""><strong>发展历程</strong></a></li>
+                  
+                </ul>
+              </li><li class="current"><a class="first-level" href="<{:U('Service/index')}>" target=""><strong>服务项目</strong></a><i></i>
+                <ul class="">
+                  
+                  <li class=""><a class="" href="<{:U('Service/index')}>" target=""><strong>服务范围</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('Service/youshi')}>" target=""><strong>服务优势</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('Service/liucheng')}>" target=""><strong>服务流程</strong></a></li>
+                  
+                </ul>
+              </li><li ><a class="first-level" href="<{:U('Case/index')}>" target=""><strong>案例欣赏</strong></a><i></i>
+                <ul class="">
+                  
+                  <li class=""><a class="" href="<{:U('Case/shangye')}>" target=""><strong>商业空间</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('Case/yule')}>" target=""><strong>娱乐空间</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('Case/jiudian')}>" target=""><strong>酒店会所</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('Case/zhuzhai')}>" target=""><strong>住宅空间</strong></a></li>
+                  
+                </ul>
+              </li><li ><a class="first-level" href="<{:U('Team/index')}>" target=""><strong>专家团队</strong></a><i></i>
+                <ul class="">
+                  
+                </ul>
+              </li><li ><a class="first-level" href="<{:U('New/index')}>" target=""><strong>新闻资讯</strong></a><i></i>
+                <ul class="">
+                  
+                  <li class=""><a class="" href="<{:U('New/gongsi')}>" target=""><strong>公司新闻</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('New/hangye')}>" target=""><strong>行业动态</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('New/wenti')}>" target=""><strong>常见问题</strong></a></li>
+                  
+                </ul>
+              </li><li ><a class="first-level" href="<{:U('Job/index')}>" target=""><strong>人力资源</strong></a><i></i>
+                <ul class="">
+                  
+                  <li class=""><a class="" href="<{:U('Job/index')}>" target=""><strong>人才战略</strong></a></li>
+                  
+                  <li class=""><a class="" href="<{:U('Job/pin')}>" target=""><strong>人才招聘</strong></a></li>
+                  
+                </ul>
+              </li><li ><a class="first-level" href="<{:U('Contact/index')}>" target=""><strong>联系我们</strong></a><i></i>
+                <ul class="">
+                  
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </nav>
+</block>
+
+<block name="main">
+
+
+    <script type="text/javascript">
+
+    $(document).ready(function(){
+
+     
+
+     $(".touch-toggle a").click(function(event){
+
+      var className = $(this).attr("data-drawer");
+
+      
+
+      if( $("."+className).css('display') == 'none' ){      
+
+       $("."+className).slideDown().siblings(".drawer-section").slideUp();
+
+      }else{
+
+       $(".drawer-section").slideUp(); 
+
+      }
+
+      event.stopPropagation();
+
+     });
+
+     
+
+     /*$(document).click(function(){
+
+      $(".drawer-section").slideUp();     
+
+     })*/
+
+     
+
+     $('.touch-menu a').click(function(){     
+
+      if( $(this).next().is('ul') ){
+
+       if( $(this).next('ul').css('display') == 'none' ){
+
+        $(this).next('ul').slideDown();
+
+        $(this).find('i').attr("class","touch-arrow-up");     
+
+       }else{
+
+        $(this).next('ul').slideUp();
+
+        $(this).next('ul').find('ul').slideUp();
+
+        $(this).find('i').attr("class","touch-arrow-down");
+
+       }   
+
+      }
+
+     });
+
+    });
+
+</script></div>
+  <!-- E touch-top --></div>
+
+    <div id="a1portalSkin_headerAreaA" class="header"><!-- Start_Module_121043 --><a name="32475" id="32475"></a>
+      <div class="module-default">
+        <div class="module-inner">
+          <div id="a1portalSkin_ctr121043121043_mainArea" class="module-content"><!-- Start_Module_121043 --><!-- S slideshow -->
+            <div class="slideshow slideshow-min carousel clearfix" style="height:500px; overflow:hidden;">
+              <div id="carousel-121043">
+                <div class="carousel-item">
+                  <div class="carousel-img"><a href="javascript:;" target=""><img src="__PUBLIC__/style/images/service.jpg" height="500" alt="" /></a></div>
+                </div>
+              </div>
+              <div class="carousel-btn carousel-btn-fixed" id="carousel-page-121043"></div>
+            </div>
+            <script type="text/javascript">
+
+ $(window).bind("load resize",function(){
+
+  $("#carousel-121043").carouFredSel({
+
+   width       : '100%',
+
+   items  : { visible : 1 },
+
+   auto     : { pauseOnHover: true, timeoutDuration:5000 },
+
+   swipe     : { onTouch:true, onMouse:true },
+
+   pagination  : "#carousel-page-121043",
+
+   scroll   : { fx : "crossfade" }
+
+  }); 
+
+ });
+
+</script><!-- E slideshow --><!-- End_Module_121043 --></div>
+        </div>
+      </div>
+    </div>
+    <!-- ==================== E Header ==================== --><!-- ==================== S main ==================== -->
+    <section class="main">
+      <section class="full-page-title-wrap clearfix" skinobjectzone="menu_2616">
+        <h2>服务项目</h2>
+        <div class="full-page-title"><i class="mark-left"></i>
+          <h3>SERVICE  PROJECTS</h3>
+          <i class="mark-right"></i></div>
+        <em class="full-page-title-line"></em></section>
+      <!-- S page-menu -->
+      <section class="full-page-menu" skinobjectzone="menu_2701">
+        <div class="full-page-menu-content">
+          <div class="page-width">
+            <ul class="clearfix">
+              <li><a href="<{:U('Service/index')}>" target="">服务范围</a></li><li ><a href="<{:U('Service/youshi')}>" target="">服务优势</a></li><li class="current"><a href="<{:U('Service/liucheng')}>" target="">服务流程</a></li>
+            </ul>
+            <!-- 没有子菜单时输出 --></div>
+        </div>
+      </section>
+      <!-- S page-menu -->
+      <div class="page-width clearfix"><!-- S full-page-content -->
+        <div class="full-page-content">
+          <div id="a1portalSkin_mainArea" class="full-page-content-wrapper"><!-- Start_Module_121045 --><a name="32428" id="32428"></a>
+            <div class="module-default">
+              <div class="module-inner">
+                <div id="a1portalSkin_ctr121045121045_mainArea" class="module-content"><!-- Start_Module_121045 --><!-- S tabs -->
+                  <div class="tabs-default tab-round">
+                    <ul class="tabs-nav clearfix">
+                  
+                    <volist name="flow" id="flow">
+                    <li class="tab-nav-item-hasSummary-round"><a href="javascript:;" class="current"><span><{$flow.title}></span><em><{$flow.title_en}></em>
+                    </a>
+                      <div class="clear"></div>
+                      <?php if($flow['id'] == 1){ ?>
+                      <i class="line-v line-v-c"></i>
+                      <?php }else{ ?> 
+                      <i class="line-v"></i>
+                      <?php } ?>
+                    </li>
+                    </volist>
+                   
+                    </ul>
+
+                    <div class="tabs-panes">
+
+                    <volist name="flow_1" id="flow_1">
+                      <div class="tab-box clearfix" style="display:block;">
+                        <div class="tab-box-content-line"><i class="line-h"></i></div>
+                        <div id="a1portalSkin_ctr121018121018_TabList_QHDSPM121018M1570" class="tab-box-content"><!-- Start_Module_121019 --><a name="32467" id="32467"></a>
+                          <div class="module-default">
+                            <div class="module-inner">
+                              <div id="a1portalSkin_ctr121018121018_TabList_ctr121019121019_mainArea" class="module-content"><!-- Start_Module_121019 -->
+                                <div class="qhd-content">
+                                  <p><{$flow_1.content}></p>
+                                </div>
+                                <!-- End_Module_121019 --></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </volist>
+                    
+                    </div>
+                  </div>
+                  <!-- E tabs --><!-- End_Module_121045 --></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- E full-page-content --></div>
+    </section>
+</block>

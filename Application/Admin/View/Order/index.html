@@ -1,0 +1,43 @@
+<extend name="Layout/index" />
+<block name="breadcrumb-01">
+	<li class="active">招商管理</li>
+</block>
+
+<block name="breadcrumb-02">
+	<h1>
+		招商管理
+		<small>
+			<i class="icon-double-angle-right"></i>
+			招商列表
+		</small>
+	</h1>
+</block>
+<block name="main">
+		<table class="table table-striped table-bordered table-hover">
+			<thead>
+				<tr align='left' bgcolor="#ccc">
+					<th>ID</th>
+					<th>姓名</th>
+					<th>电话</th>
+					<th>时间</th>
+					<th>验证码</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+			<volist name="list" id="vo">
+				<tr>
+					<td><{$vo.id}></td>
+					<td><{$vo.username}></td>
+					<td><{$vo.tel}></td>
+					<td><{$vo.time|date="Y-m-d",###}></td>
+					<td><{$vo.code}></td>
+					<td>
+						<a href="<{:U('Order/del',array('id'=>$vo['id']))}>">删除</a>
+					</td>
+				</tr>
+			</volist>
+			</tbody>
+		</table>
+	
+</block>

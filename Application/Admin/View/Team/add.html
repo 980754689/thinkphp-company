@@ -1,0 +1,89 @@
+<extend name="Layout/index" />
+<block name="breadcrumb-01">
+	<li class="active">专家团队</li>
+</block>
+
+<block name="breadcrumb-02">
+	<h1>
+		团队管理
+		<small>
+			<i class="icon-double-angle-right"></i>
+			添加成员
+		</small>
+	</h1>
+</block>
+<block name="main">
+
+	<div class="row">
+		<div class="col-md-12">
+			<form action="<{:U('Team/doadd')}>" method='post' class="form-horizontal" enctype="multipart/form-data">
+
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">姓名 ：</label>
+					<div class="col-sm-4">
+						<input type="text" name="name" class="form-control" placeholder="">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">职称 ：</label>
+					<div class="col-sm-4">
+						<input type="text" name="zhicheng" class="form-control" placeholder="">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">工作年限 ：</label>
+					<div class="col-sm-4">
+						<input type="text" name="work_time" class="form-control" placeholder="">
+					</div>
+				</div>
+
+                <div class="form-group">
+                    <label for="" class="col-sm-2 control-label">分格 ：</label>
+                    <div class="col-sm-4">
+                        <!-- <input type="text" name="fenge" class="form-control" placeholder="" value="<{$vo.fenge}>"> -->
+                        <textarea style="width:450px;height:100px;" name="fenge"></textarea>
+                    </div>
+                </div>
+				
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">经验 ：</label>
+					<div class="col-sm-4">
+						<textarea style="width:450px;height:100px;" name="exper"></textarea>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">简介 ：</label>
+					<div class="col-sm-4">
+						<textarea style="width:450px;height:100px;" name="jianjie"></textarea>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="" class="col-sm-2 control-label">展示状态：</label>
+					<div class="col-sm-4">
+						<input type="radio" name="is_valid" value="1" checked>启用
+						<input type="radio" name="is_valid" value="0" >禁用
+					</div>
+				</div>	
+
+				<div class="form-group" style="">
+					<label for="" class="col-sm-2 control-label">照片：</label>
+					<div class="col-sm-4">
+						<input type="file" name="img" class="" placeholder="">
+						<p>(建议使用220*295，否则图片变形)</p>
+					</div>
+				</div>
+
+				<div class="form-group">
+				    <div class="col-sm-offset-2 col-sm-4">
+				      <button type="submit" style="width: 100px;border-radius: 10px" class="btn btn-default">添 加</button>
+				    </div>
+				</div>
+
+			</form>
+		</div>
+	</div>
+</block>
